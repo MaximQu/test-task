@@ -1,0 +1,18 @@
+@use "../../styles/vars" as *;
+
+.achievementsList {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(12.25rem, 1fr));
+  gap: 1rem;
+}
+
+.achievementItem {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: $bp-lg) {
+  .platformAchievements {
+    padding-right: 0;
+  }
+}

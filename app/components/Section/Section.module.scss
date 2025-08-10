@@ -1,0 +1,42 @@
+@use "../../styles/vars" as *;
+
+.section {
+  border: 1px solid $grey;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  background-color: rgba($grey, 0.2);
+}
+
+.title {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  font-weight: 400;
+}
+
+.subtitle {
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: $primary;
+}
+
+.amount {
+  color: $primary;
+  font-size: 1rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(12.25rem, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: $bp-sm) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}

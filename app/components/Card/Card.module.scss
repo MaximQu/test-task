@@ -1,0 +1,94 @@
+@use "../../styles/vars" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 0.875rem;
+  min-height: 15.3125rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba($grey, 0.5);
+  position: relative;
+
+  &.rank1 {
+    background: $dark-gradient;
+  }
+
+  &.rank2 {
+    background: $gray-gradient;
+  }
+
+  &.rank3 {
+    background: $brown-gradient;
+  }
+}
+
+.tip {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.line {
+  display: block;
+  margin-block: 1rem;
+  background-color: rgba($grey, 0.5);
+  height: 0.5px;
+}
+
+.content {
+  margin-top: auto;
+  width: 100%;
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.icon {
+  margin-block: 0.8rem;
+}
+
+.title {
+  color: $gold;
+  margin-bottom: 0.75rem;
+  font-weight: 400;
+}
+
+.total {
+  color: $primary;
+}
+
+.progressBar {
+  display: flex;
+  margin-top: 0.65rem;
+}
+
+.bar {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid $grey;
+  background-color: rgba($grey, 0.25);
+  border-radius: 0.5rem;
+}
+
+.achieved,
+.notAchieved {
+  display: block;
+  height: 0.25rem;
+  transition: width $transition-duration ease;
+}
+
+.achieved {
+  background: $light-gradient;
+}
+
+.notAchieved {
+  background-color: $grey;
+  flex: 1;
+}

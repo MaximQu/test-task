@@ -1,0 +1,80 @@
+@use "../../styles/vars" as *;
+
+.progressBar {
+  width: 100%;
+  padding: 1rem;
+  width: 100%;
+  border: 1px solid rgba($grey, 0.5);
+  border-radius: 1rem;
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    width: 8rem;
+    height: 6.8125rem;
+    filter: blur(27px);
+    background: linear-gradient(90deg, transparent, rgba(185, 135, 86, 0.27));
+  }
+}
+
+.progressBarContent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.125rem;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  text-transform: uppercase;
+  color: $primary;
+}
+
+.num {
+  font-size: 0.875rem;
+}
+
+.total {
+  font-size: 1rem;
+  color: $primary;
+}
+
+.bar {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.25rem;
+  border: 1px solid $grey;
+  background-color: rgba($grey, 0.25);
+  border-radius: 0.5rem;
+}
+
+.achieved,
+.notAchieved {
+  display: block;
+  height: 2rem;
+  border-radius: 0.25rem;
+  transition: width $transition-duration ease;
+}
+
+.achieved {
+  background: $light-gradient;
+}
+
+.notAchieved {
+  background-color: $grey;
+  flex: 1;
+}
+
+@media (max-width: $bp-sm) {
+  .text {
+    font-size: 0.875rem;
+  }
+}

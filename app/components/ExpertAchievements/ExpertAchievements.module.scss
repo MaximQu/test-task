@@ -1,0 +1,17 @@
+@use "../../styles/vars" as *;
+
+.achievementsList {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(12.25rem, 1fr));
+  gap: 1rem;
+}
+
+.achievementItem {
+  max-width: 12.25rem;
+}
+
+@media (max-width: $bp-lg) {
+  .expertAchievements {
+    padding-right: 0;
+  }
+}

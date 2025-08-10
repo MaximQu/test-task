@@ -1,0 +1,36 @@
+$primary: #a6a6a6;
+$secondary: #1c1b1b;
+$grey: #535353;
+$white: #ffffff;
+$black: #0d0d0d;
+$gold: #af8d6c;
+
+$transition-duration: 0.3s;
+
+$light-gradient: linear-gradient(
+  -90deg,
+  rgb(213, 186, 148) 0%,
+  rgb(185, 135, 86) 50%,
+  rgb(83, 68, 52) 100%
+);
+
+$brown-gradient: linear-gradient(
+  0deg,
+  rgba(105, 83, 63, 0.6) 0%,
+  rgb(180, 149, 122, 0.6) 100%
+);
+
+$gray-gradient: linear-gradient(
+  180deg,
+  rgba(94, 94, 94, 0.6) 0%,
+  rgb(58, 58, 58) 100%
+);
+
+$dark-gradient: linear-gradient(rgb(40, 40, 40) 0%, rgb(12, 11, 11, 0.6) 100%);
+
+$bp-2xs: 480px;
+$bp-xs: 575px;
+$bp-sm: 768px;
+$bp-md: 991px;
+$bp-lg: 1199px;
+$bp-xl: 1308px;

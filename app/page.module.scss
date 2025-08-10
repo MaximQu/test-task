@@ -1,0 +1,12 @@
+@use "./styles/vars" as *;
+.main {
+  padding-top: 1rem;
+  min-height: 100vh;
+  background-color: $black;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
