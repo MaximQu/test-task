@@ -12,22 +12,22 @@ import "swiper/css/grid";
 const expertAchievementsData = [
   {
     title: "Документаліст",
-    description: "Додано 30 корисних документов.",
+    description: "Додано 30 корисних документів.",
     rank: 1,
   },
   {
     title: "Документаліст",
-    description: "За опублікованих статей в блоге",
+    description: "За опублікованих статей в блогі",
     rank: 1,
   },
   {
     title: "Документаліст",
-    description: "За опублікованих статей в блоге",
+    description: "За опублікованих статей в блогі",
     rank: 1,
   },
   {
     title: "Документаліст",
-    description: "За опублікованих статей в блоге",
+    description: "За опублікованих статей в блогі",
     rank: 1,
   },
   {
@@ -62,7 +62,7 @@ const ExpertAchievements: FC = () => {
       >
         {expertAchievementsData.map(
           (
-            { title, description, achievedAmount, totalAchievements },
+            { title, description, achievedAmount, totalAchievements, rank },
             index,
           ) => (
             <SwiperSlide key={index} className={st.achievementItem}>
@@ -71,7 +71,7 @@ const ExpertAchievements: FC = () => {
                 text={description}
                 achievedAmount={achievedAmount}
                 totalAchievements={totalAchievements}
-                rank={1}
+                rank={rank as 1 | 2 | 3}
               />
             </SwiperSlide>
           ),

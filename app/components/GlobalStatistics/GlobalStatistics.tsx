@@ -75,7 +75,7 @@ const GlobalStatistics: FC = () => {
           ))}
         </ul>
         <button className={st.dropdown}>
-          <span>Всі ранги</span>
+          <span className={st.btnText}>Всі ранги</span>
           <ArrowDown className={st.arrowIcon} />
         </button>
       </div>

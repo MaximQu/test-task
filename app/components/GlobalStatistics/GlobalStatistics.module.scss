@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
-  background: rgba($grey, 0.1);
+  background-color: rgba($black, 0.35);
   border-radius: 1.5rem;
   padding: 0.5rem;
   border: 1px solid rgba($grey, 0.25);
@@ -41,6 +41,7 @@
   border-radius: 1rem;
   padding: 1rem;
   border: 1px solid rgba($grey, 0.5);
+  background-color: rgba($grey, 0.1);
 }
 
 .statisticsWrapper {
@@ -57,12 +58,12 @@
 
 .generalList {
   display: flex;
-  gap: 0.5rem;
   border-radius: 1rem;
-  border: 1px solid rgba($grey, 0.15);
+  border: 1px solid rgba($grey, 0.1);
   background-color: rgba($grey, 0.1);
   padding: 0.1875rem;
   width: 100%;
+  isolation: isolate;
 }
 
 .wrapper {
@@ -71,12 +72,27 @@
 }
 
 .generalItem {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   width: 100%;
   border: 1px solid transparent;
   border-radius: 1rem;
   min-width: 11.25rem;
   transition-duration: $transition-duration;
+
+  &:not(:last-child) {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      inset-block: 0;
+      margin-block: auto;
+      height: 4rem;
+      width: 1px;
+      background-color: rgba($grey, 0.5);
+    }
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -103,6 +119,10 @@
   transition-duration: $transition-duration;
 }
 
+.count {
+  color: $grey;
+}
+
 .amount {
   font-size: 1.5rem;
   display: block;
@@ -114,16 +134,10 @@
   align-items: center;
   gap: 0.625rem;
   text-transform: uppercase;
+  border: 1px solid rgba($grey, 0.1);
   border-radius: 1rem;
   padding: 2rem 1.5rem;
   background: rgba($grey, 0.1);
-
-  span {
-    white-space: nowrap;
-    color: $primary;
-
-    transition-duration: $transition-duration;
-  }
 
   @media (hover: hover) {
     &:hover {
@@ -136,6 +150,14 @@
       }
     }
   }
+}
+
+.btnText {
+  white-space: nowrap;
+  color: $primary;
+  font-size: 0.875rem;
+
+  transition-duration: $transition-duration;
 }
 
 .arrowIcon {
@@ -161,9 +183,23 @@
 }
 
 @media (max-width: $bp-sm) {
+  .globalStatistics {
+    &::before {
+      height: 18.25rem;
+    }
+  }
+
+  .generalList {
+    width: calc(100% + 2.5rem);
+  }
+
   .statisticsWrapper {
     gap: 0.5rem;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .description {
+    width: 90px;
   }
 
   .generalList {
